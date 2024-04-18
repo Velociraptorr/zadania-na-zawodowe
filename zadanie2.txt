@@ -1,0 +1,36 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        string string1 = "15|9|37";
+        string string2 = "252|4|200|11";
+        string string3 = "5|3|7|11";
+        
+        int wynik1 = 0;
+        int wynik2 = 0;
+        int wynik3 = 0;
+        
+        foreach (string pierwszy in string1.Split('|'))
+        {
+            wynik1 += int.Parse(pierwszy);
+        }
+        
+        foreach (string drugi in string2.Split('|'))
+        {
+            wynik2 += int.Parse(drugi);
+        }
+
+        foreach (string trzeci in string3.Split('|'))
+        {
+            wynik3 += int.Parse(trzeci);
+        }
+
+        string ostateczny = wynik1 + "|" + wynik2 + "|" + wynik3;
+        
+        Console.WriteLine("Wynik ostateczny:");
+        
+        Console.WriteLine(ostateczny);
+    }
+}
